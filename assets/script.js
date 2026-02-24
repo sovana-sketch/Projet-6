@@ -1,3 +1,12 @@
+function previous() {
+const widthSlider = document.querySelector('.bannner') .offsetWidth;
+	document.querySelector('.bannner-img').scrollLeft -=widthSlider;
+}
+function next() {
+	const widthSlider = document.querySelector('.bannner') .offsetWidth;
+	document.querySelector('.bannner-img').scrollLeft +=widthSlider;
+	
+}
 const slides = [
 	{
 		"image":"slide1.jpg",
