@@ -142,9 +142,8 @@ table {
 	border-spacing: 0;
 }
 
-body {
+body {}
 
-}
 section {
 	margin-block: 6em;
 }
@@ -202,10 +201,14 @@ header {
 
 #banner {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 	width: 100%;
 	min-height: 470px;
 	position: relative;
-	overflow: hidden;
+	
+
 }
 
 .banner-img {
@@ -215,26 +218,25 @@ header {
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
+	overflow: hidden;
+	
 }
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
-	position: absolute;
-	transform: translateY(-50%);
-	top: 50%;
-	}
+
+}
 
 #banner .arrow_left {
 	left: 10px;
-
-
+position: absolute;
 
 }
 
 #banner .arrow_right {
 	right: 10px;
-
+position: absolute;
 }
 
 /* Gestion des points du carrousel */
@@ -251,7 +253,8 @@ header {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	;
 }
 
 .dot_selected {
@@ -267,6 +270,7 @@ header {
 	color: white;
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	text-align: center;
+	
 }
 
 #banner span {
