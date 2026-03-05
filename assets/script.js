@@ -40,14 +40,10 @@ arrowRight.addEventListener('click', function (event) {
 	bannerImg.src = "./assets/images/slideshow/" + slides[i].image
 	bannerText.innerHTML = slides[i].tagLine
 
-	
+
 })
 //dots
-function showSlide() {
-  bannerImg.src = "./assets/images/slideshow/" + slides[index].image;
-  bannerText.innerHTML = slides[index].tagLine;
-  updatedots();
-}
+
 
 const dot = document.querySelector('.dot');
 function createDots() {
@@ -56,21 +52,18 @@ function createDots() {
 		dot.classList.add('dot');
 		dot.addEventListener('click', () => {
 			index = index;
-			showSlide();
+
 		});
 		document.querySelector('.dots-container').appendChild(dot);
 	});
 }
 createDots();
 
-function updatedots() {	
+function updatedots() {
 	const dots = document.querySelectorAll('.dot');
-	dots.forEach((dot, index) => {
-		if (index === i) {
-			dot.classList.add('active');
-		} else {
-			dot.classList.remove('active');
-		}
+	dot.forEach((dot, index) => {
+		dot.classList.toggle('active', index === i);
 	});
+		
 }
-updatedots();
+
